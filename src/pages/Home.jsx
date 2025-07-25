@@ -26,8 +26,6 @@ export default function Home() {
       });
       setNotes(updatedNotes);
       setEditingId(null);
-      setTitle("");
-      setContent("");
     } else {
       const newNotes = {
         id: Date.now(),
@@ -39,6 +37,8 @@ export default function Home() {
       };
       setNotes((prevState) => [...prevState, newNotes]);
     }
+    setTitle("");
+    setContent("");
 
   };
 
